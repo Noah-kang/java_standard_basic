@@ -26,9 +26,26 @@ public class VarEx3 {
         // double d = 3.14f; // float 타입의 리터럴이지만 double 은 float 보다 범위가 넓어서 허용됩니다.
 
         System.out.println(10.); // 10.0 .을 붙이면 실수형으로 인식하며 f가 붙지 않았기에 double 타입으로 인식합니다.
-        System.out.println(.10); // 0.1 위와 같이 double로 인식하며 뒤의 0은 생략합니다.
+        System.out.println(.10); // 0.1 위와 같이 double 로 인식하며 뒤의 0은 생략합니다.
         System.out.println(10f); // 10.0 f를 붙이면 float 타입으로 인식하며 접미사는 생략되어 10.0이 출력됩니다.
         System.out.println(1e3); // 1000.0 e는 10^n을 의미합니다. 따라서 1*10^3 인 1000이 출력되며 e는 실수형 이기에 1000.0이 출력됩니다.
 
+        char ch = 'A';
+        //char ch = 'AB'; // '' 문자형이기에 하나의 문자만 들어가야합니다.
+        //char ch = ''; // 빈문자도 허용되지 않습니다. 하나의 문자가 들어가야합니다.
+        System.out.println(ch); // 저장된 char 타입 문자 A가 출력됩니다.
+        int i = 'A'; // 정수타입 int 에 문자 'A'를 할당합니다.
+        System.out.println(i); // 문자 A의 문자코드 65가 출력됩니다.
+
+        String str = ""; // "" 문자열이기에 빈문자열(empty string)도 허용합니다.
+        String str2 = "ABCD"; // 둘이상의 문자도 허용합니다.
+        String str3 = "123";
+        String str4 = str2 + str3;
+        String str5 = str3 + str2;
+        System.out.println(str4); // ABCD123이 출력됩니다.
+        System.out.println(str5); // 123ABCD이 출력됩니다.
+        System.out.println(""+7+7); // 문자열변환이 우선되어 77이 출력됩니다.
+        System.out.println(7+7+""); // 숫자연산이 먼저 되서 14가 출력됩니다.
+        // 연산은 좌에서 우로 실행되기 때문입니다.
     }
 }
